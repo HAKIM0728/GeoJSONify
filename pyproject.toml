@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "repl-nix-geojsonify-1"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+readme = "README.md"
+packages = [{include = "repl_nix_geojsonify_1"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.1"
+earthengine-api = "^0.1.386"
+geemap = "^0.30.4"
+folium = "^0.15.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
