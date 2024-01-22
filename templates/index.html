@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="static/logoo-removebg.png" width="70" height="60" class="d-inline-block align-top" alt="">
+        </a>
+    </nav>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Folium Map with Flask</title>
+    <title>GeoJSONify</title>
+
+    <style>
+        /* Adjust the height of the map container */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Set the map container to take 2/3 of the available height */
+        #map-container {
+            flex: 2; /* Takes 2/3 of the available height */
+            overflow: hidden; /* Hide overflow content */
+        }
+
+        footer {
+            /* Style your footer as needed */
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    {{ map_html|safe }}
+    <div id="map-container">
+        {{ map_html|safe }}
+    </div>
+
+  <footer>
+      <p>&copy; 2024 GeoJSONify. All rights reserved.</p>
+  </footer>
 </body>
 </html>
